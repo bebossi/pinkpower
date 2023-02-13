@@ -14,7 +14,8 @@ export function CreateCharacter(){
 
 
     function handleChange(e) {
-        setCharacter({...character, [e.target.name]: e.target.value})
+        setCharacter({...character, [e.target.name]: e.target.value});
+        
     }
 
 
