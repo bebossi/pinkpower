@@ -14,6 +14,7 @@ export function EditCharacter(){
         videoURL: "",
         description: "",
         curiosity: "",
+        gifURL: ""
     })
 
     useEffect(() => {
@@ -72,6 +73,9 @@ export function EditCharacter(){
 
             <label htmlFor="curiosity"  >Curiosidades:</label>
             <input id="curiosity" name="curiosity" value={character.curiosity} onChange={handleChange} />
+
+            <label htmlFor="gifURL"  >Curiosidades:</label>
+            <input id="gifURL" name="gifURL" value={character.gifURL} onChange={handleChange} />
 
             <button>Editar</button>
         </form>

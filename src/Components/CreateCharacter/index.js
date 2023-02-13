@@ -13,6 +13,7 @@ export function CreateCharacter(){
         videoURL: "",
         description: "",
         curiosity: "",
+        gifURL: ""
     })
 
      function handleChange(e) {
@@ -60,6 +61,9 @@ export function CreateCharacter(){
 
             <label htmlFor="curiosity"  >Curiosidades:</label>
             <input id="curiosity" name="curiosity" value={character.curiosity} onChange={handleChange} />
+
+            <label htmlFor="gifURL"  >Curiosidades:</label>
+            <input id="gifURL" name="gifURL" value={character.gifURL} onChange={handleChange} />
 
             <button>Criar Personagem </button>
         </form>
