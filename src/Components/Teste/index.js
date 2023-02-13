@@ -1,7 +1,7 @@
 import { api } from "../../utils/api";
 import React from "react";
 import { useState, useEffect } from "react";
-import YouTube, { YouTubeProps } from "react-youtube";
+import ReactPlayer from "react-player";
 
 export function Teste() {
   const [character, setCharacter] = useState([]);
@@ -20,19 +20,11 @@ export function Teste() {
     fetchCharacters();
   }, []);
 
-  const opts: YouTubeProps["opts"] = {
-    height: "390",
-    width: "640",
-    playerVars: {
-      autoplay: 1,
-    },
-  };
-
   return (
     <>
       <h1>Testando</h1>
       {character.map((e) => {
-        return <YouTube videoId={e.attributes.videoURL} opts={opts} />;
+        return <ReactPlayer url={e.attributes.videoURL} playing="true" />;
       })}
     </>
   );
