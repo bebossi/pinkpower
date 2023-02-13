@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { api } from "../../utils/api";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-export function CreateCharacter(){
+export function EditCharacter(){
     const navigate = useNavigate();
+    const params = useParams();
 
     const [character, setCharacter] = useState({
         name: "",
@@ -15,10 +16,22 @@ export function CreateCharacter(){
         curiosity: "",
     })
 
+    useEffect(() => {
+        async function fetchCharacter(){
+            try{
+
+                const response = await api.get(`/characters/${params.characterId}`)
+                setCharacter(response.data.data.attributes)
+            }catch(err){
+                console.log(err)
+            }
+        }
+        fetchCharacter();
+    }, [])
+
      function handleChange(e) {
         setCharacter({...character, [e.target.name]: e.target.value});
     }
-
 
     async function handleSubmit(e) {
         try{
@@ -26,18 +39,17 @@ export function CreateCharacter(){
 
             const infosForAPI = {data: {...character}};
     
-            await api.post("/characters", infosForAPI);
+            await api.put(`/characters/${params.characterId}`, infosForAPI);
 
-            navigate("/")
+            navigate("/");
         } catch(err){
             console.log(err);
         }
     }
 
-
     return (
         <>
-        <h1>Criar novo personagem</h1>
+        <h1>Editar personagem</h1>
 
         <form onSubmit={handleSubmit} >
             <label htmlFor="name" >Nome:</label>
@@ -61,7 +73,7 @@ export function CreateCharacter(){
             <label htmlFor="curiosity"  >Curiosidades:</label>
             <input id="curiosity" name="curiosity" value={character.curiosity} onChange={handleChange} />
 
-            <button>Criar Personagem </button>
+            <button>Editar</button>
         </form>
         </>
     )
