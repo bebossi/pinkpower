@@ -1,6 +1,9 @@
-import { useState } from "react"
+import { useState } from "react";
+import { api } from "../../utils/api";
+import { useNavigate } from "react-router-dom";
 
 export function CreateCharacter(){
+    const navigate = useNavigate();
 
     const [character, setCharacter] = useState({
         name: "",
@@ -11,11 +14,25 @@ export function CreateCharacter(){
         description: "",
         curiosity: "",
     })
+    console.log(character)
 
-
-    function handleChange(e) {
+     function handleChange(e) {
         setCharacter({...character, [e.target.name]: e.target.value});
-        
+    }
+
+
+    async function handleSubmit(e) {
+        try{
+            e.preventDefault();
+
+            const infosForAPI = {data: {...character}};
+    
+            await api.post("/characters", infosForAPI);
+
+            navigate("/")
+        } catch(err){
+            console.log(err);
+        }
     }
 
 
@@ -23,7 +40,7 @@ export function CreateCharacter(){
         <>
         <h1>Criar novo personagem</h1>
 
-        <form>
+        <form onSubmit={handleSubmit} >
             <label htmlFor="name" >Nome:</label>
             <input id="name" name="name" value={character.name} onChange={handleChange} />
 
@@ -33,7 +50,7 @@ export function CreateCharacter(){
             <label htmlFor="age" >Idade:</label>
             <input id="age"  type="number" name="age" value={character.age} onChange={handleChange} />
 
-            <label htmlFor="URL"  >Imagem URL:</label>
+            <label htmlFor="imageURL"  >Imagem URL:</label>
             <input id="imageURL" name="imageURL" value={character.imageURL} onChange={handleChange} />
 
             <label htmlFor="videoURL"  >Video URL:</label>
@@ -44,10 +61,9 @@ export function CreateCharacter(){
 
             <label htmlFor="curiosity"  >Curiosidades:</label>
             <input id="curiosity" name="curiosity" value={character.curiosity} onChange={handleChange} />
+
+            <button>Criar Personagem </button>
         </form>
-
-
         </>
-
     )
 }
