@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { api } from "../../utils/api";
+import { Link } from "react-router-dom";
 
 export function Home() {
   const [character, setCharacter] = useState([]);
-  console.log(character);
 
   useEffect(() => {
     async function fetchCharacters() {
@@ -24,7 +24,10 @@ export function Home() {
       {character.map((e) => {
         return (
           <>
-            <b>{e.attributes.name}</b> <br />
+            <Link to={`/characters/${e.id}`}>
+              <img src={e.attributes.imageURL} alt="Foto do personagem" />
+            </Link>
+            <br />
           </>
         );
       })}
