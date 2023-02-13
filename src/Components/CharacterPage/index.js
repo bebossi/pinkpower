@@ -26,12 +26,10 @@ export function CharacterPage() {
     fetchCharacters();
   });
 
-  let dataAtual = new Date();
-  let anoAtual = dataAtual.getFullYear();
-
   return (
     <>
       <h1>{character.name}</h1>
+      <img src={character.gifURL} alt="GIF do personagem" /> <br />
       <span>
         <b>Descrição:</b> {character.description}
       </span>
@@ -46,11 +44,12 @@ export function CharacterPage() {
       <br />
       <span>
         <b>Idade:</b> {character.age} <b>Idade atual:</b>
-        {anoAtual - character.age}
+        {2023 - character.age}
       </span>
       <br />
       <ReactPlayer url={character.videoURL} playing={true} />
       <button onClick={handdleBack}>Voltar</button>
+      <button>Deletar</button>
     </>
   );
 }
