@@ -82,44 +82,8 @@ export function CreateCharacter(){
             <input id="gifURL" name="gifURL" value={character.gifURL} onChange={handleChange} />
             </div>
 
-            <button>Criar Personagem </button>
+            <button className={style.btnCreate} >Criar Personagem </button>
         </form>
         </>
     )
 }
-
-// return (
-//     <>
-//     <h1>Criar novo personagem</h1>
-
-//     <form onSubmit={handleSubmit} className={style.form} >
-//         <div className={style.divForm} >
-//         <label htmlFor="name" >Nome:</label>
-//         <input id="name" name="name" value={character.name} onChange={handleChange} />
-//         </div>
-
-//         <label htmlFor="origin" >Origem:</label>
-//         <input id="origin" name="origin" value={character.origin} onChange={handleChange} />
-
-//         <label htmlFor="age" >Idade:</label>
-//         <input id="age"  type="number" name="age" value={character.age} onChange={handleChange} />
-
-//         <label htmlFor="imageURL"  >Imagem URL:</label>
-//         <input id="imageURL" name="imageURL" value={character.imageURL} onChange={handleChange} />
-
-//         <label htmlFor="videoURL"  >Video URL:</label>
-//         <input id="videoURL" name="videoURL" value={character.videoURL} onChange={handleChange} />
-
-//         <label htmlFor="description"  >Descrição:</label>
-//         <input id="description"  name="description" value={character.description} onChange={handleChange} />
-
-//         <label htmlFor="curiosity"  >Curiosidades:</label>
-//         <input id="curiosity" name="curiosity" value={character.curiosity} onChange={handleChange} />
-
-//         <label htmlFor="gifURL"  >Curiosidades:</label>
-//         <input id="gifURL" name="gifURL" value={character.gifURL} onChange={handleChange} />
-
-//         <button>Criar Personagem </button>
-//     </form>
-//     </>
-// )

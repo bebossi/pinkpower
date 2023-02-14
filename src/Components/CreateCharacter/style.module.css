@@ -33,3 +33,16 @@
     font-size: 1.2em;
     padding-bottom: 1em;
 }
+
+.btnCreate{
+    color: black;
+    background-color: #0e641fb0;
+    padding: 10px 30px 10px 30px;
+    border-radius: 6px;
+}
+
+.btnCreate:hover{
+    background-color: #04ec1b;
+    font-weight: bold;
+    transition: .2s ease;
+}
