@@ -1,0 +1,51 @@
+.title {
+    font-size: 3em;
+}
+
+.oDiv {
+    display: flex;
+    background-color: #ffe0ff;
+    padding: 2%;
+    border-radius: 30px;
+    flex-wrap: wrap;
+}
+
+.gif {
+    width: 20%;
+    border: 20px #ffe0ff solid;
+}
+
+.gifDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 2%;
+    background-color: transparent;
+}
+
+.topic {
+    font-family: Monospace;
+    font-size: 2em;
+    border-bottom: 2px solid #89004f;
+    color: #89004f;
+    background-color: transparent;
+}
+
+.iDiv {
+    width: 100%;
+    background-color: transparent;
+    color: #89004f;
+    margin-bottom: 1%;
+}
+
+.bold {
+    background-color: transparent;
+    color: #c33b80;
+}
+
+.movie {
+    width: 100%;
+    background-color: transparent;
+    justify-content: center;
+    display: flex;
+}
