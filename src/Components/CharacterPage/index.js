@@ -38,6 +38,12 @@ export function CharacterPage() {
     fetchCharacters();
   });
 
+  const [isContentOpen, setIsContentOpen] = useState(false);
+
+  const handleContentToggle = () => {
+    setIsContentOpen(!isContentOpen);
+  };
+
   return (
     <>
       <h1 className={style.title}>{character.name}</h1>
@@ -52,23 +58,48 @@ export function CharacterPage() {
 
       <div className={style.oDiv}>
         <div className={style.iDiv}>
-          <h2 className={style.topic}>Descrição:</h2>
-          {character.description}
+          <h2 className={style.topic} onClick={handleContentToggle}>
+            Descrição:
+          </h2>
+          <div
+            className={`${style.content} ${
+              isContentOpen ? style.contentOpen : ""
+            }`}
+          >
+            {character.description}
+          </div>
         </div>
       </div>
       <br />
       <div className={style.oDiv}>
         <div className={style.iDiv}>
-          <h2 className={style.topic}>Curiosidades:</h2>
-          {character.curiosity}
+          <h2 className={style.topic} onClick={handleContentToggle}>
+            Curiosidades:
+          </h2>
+          <div
+            className={`${style.content} ${
+              isContentOpen ? style.contentOpen : ""
+            }`}
+          >
+            {character.curiosity}
+          </div>
         </div>
       </div>
       <br />
       <div className={style.oDiv}>
         <div className={style.iDiv}>
-          <h2 className={style.topic}>Origem:</h2> {character.origin}{" "}
-          <b className={style.bold}>Ano de criação:</b> {character.age}{" "}
-          <b className={style.bold}>Idade atual:</b> {2023 - character.age}
+          <h2 className={style.topic} onClick={handleContentToggle}>
+            Origem:
+          </h2>{" "}
+          <div
+            className={`${style.content} ${
+              isContentOpen ? style.contentOpen : ""
+            }`}
+          >
+            {character.origin} <b className={style.bold}>Ano de criação:</b>{" "}
+            {character.age} <b className={style.bold}>Idade atual:</b>{" "}
+            {2023 - character.age}
+          </div>
         </div>
       </div>
 
