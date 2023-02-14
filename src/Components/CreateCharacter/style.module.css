@@ -1,0 +1,48 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.divForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 7.1em;
+}
+
+.divForm label {
+    font-family: monospace;
+    font-size: 2em;
+    padding-left: 2%;
+    padding-bottom: 1%;
+}
+
+.divForm input{
+    background-color: #ffe0ff;
+    border-radius: 10px;
+    color: #89004f;
+    font-size: 1.2em;
+    padding-bottom: 1em;
+}
+
+.divForm textarea{
+    background-color: #ffe0ff;
+    border-radius: 10px;
+    color: #89004f;
+    font-size: 1.2em;
+    padding-bottom: 1em;
+}
+
+.btnCreate{
+    color: black;
+    background-color: #0e641fb0;
+    padding: 10px 30px 10px 30px;
+    border-radius: 6px;
+}
+
+.btnCreate:hover{
+    background-color: #04ec1b;
+    font-weight: bold;
+    transition: .2s ease;
+}
