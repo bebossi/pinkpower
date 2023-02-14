@@ -1,0 +1,103 @@
+.navbar {
+    background-color: #89004f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .navbarLogo a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #89004f;
+  }
+  
+  .navbarToggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .navbarToggle span {
+    height: 0.2rem;
+    width: 100%;
+    background-color: white;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbarToggle span:nth-child(2) {
+    transform: translateY(0.3rem);
+  }
+  
+  .navbarToggle span:nth-child(3) {
+    transform: translateY(0.6rem);
+  }
+  
+  .navbarLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    margin-top: 1rem;
+    background-color: #89004f;
+  }
+  
+  .navbarLinksOpen {
+    height: 7.5rem;
+  }
+  
+  .navbarLinks a {
+    color: white;
+    margin: 0.5rem 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    background-color: #89004f;
+  }
+  
+  .navbarSearch {
+    background-color: #89004f;
+  }
+
+  .navbarSearch input {
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    color: #89004f;
+    background-color: white;
+  }
+  
+  .navbarSearch button {
+    background-color: #ff69b4;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .navbarUser{
+    background-color: #89004f;
+  }
+
+  .navbarUser a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #89004f;
+  }
