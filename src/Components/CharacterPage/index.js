@@ -5,6 +5,7 @@ import { useState } from "react";
 import ReactPlayer from "react-player";
 import { useNavigate } from "react-router";
 import style from "./style.module.css";
+import { Link } from "react-router-dom";
 
 export function CharacterPage() {
   const [character, setCharacter] = useState([]);
@@ -124,9 +125,11 @@ export function CharacterPage() {
           <button onClick={handdleBack} className={style.button}>
             Voltar
           </button>
-          <button onClick={handdleBack} className={style.buttonEdit}>
+         <Link to={`/editCharacter/${params.characterId}`} >
+          <button className={style.buttonEdit}>
             Editar
           </button>
+          </Link>
           <button onClick={handleDelete} className={style.buttonCancel}>
             Deletar
           </button>
