@@ -6,6 +6,7 @@ import { CharacterPage } from "./Components/CharacterPage";
 import { EditCharacter } from "./Components/EditCharacter";
 import { NavBar } from "./Components/NavBar";
 
+
 function App() {
   return (
     <div className="App">
