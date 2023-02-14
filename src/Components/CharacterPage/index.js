@@ -14,6 +14,17 @@ export function CharacterPage() {
     navigate("/");
   }
 
+  async function handleDelete(){
+    try{
+      const response = await api.delete(`/characters/${params.characterId}`);
+      console.log(response)
+
+      navigate("/")
+    } catch(err){
+      console.log(err)
+    }
+  }
+
   useEffect(() => {
     async function fetchCharacters() {
       try {
@@ -49,7 +60,7 @@ export function CharacterPage() {
       <br />
       <ReactPlayer url={character.videoURL} playing={true} />
       <button onClick={handdleBack}>Voltar</button>
-      <button>Deletar</button>
+      <button onClick={handleDelete} >Deletar</button>
     </>
   );
 }
