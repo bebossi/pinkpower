@@ -120,8 +120,17 @@ export function CharacterPage() {
         <div className={style.movie}>
           <ReactPlayer url={character.videoURL} playing={true} />
         </div>
-        <button onClick={handdleBack}>Voltar</button>
-        <button onClick={handleDelete}>Deletar</button>
+        <div className={style.btn}>
+          <button onClick={handdleBack} className={style.button}>
+            Voltar
+          </button>
+          <button onClick={handdleBack} className={style.buttonEdit}>
+            Editar
+          </button>
+          <button onClick={handleDelete} className={style.buttonCancel}>
+            Deletar
+          </button>
+        </div>
       </div>
     </>
   );
