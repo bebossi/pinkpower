@@ -44,6 +44,11 @@
     color: #c33b80;
 }
 
+.text {
+    background-color: transparent;
+    color: #89004f;
+}
+
 .movie {
     width: 100%;
     background-color: transparent;
