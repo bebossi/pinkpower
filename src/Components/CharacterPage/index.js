@@ -38,10 +38,20 @@ export function CharacterPage() {
     fetchCharacters();
   });
 
-  const [isContentOpen, setIsContentOpen] = useState(false);
+  const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
+  const [isCuriosityOpen, setIsCuriosityOpen] = useState(false);
+  const [isOriginOpen, setIsOriginOpen] = useState(false);
 
-  const handleContentToggle = () => {
-    setIsContentOpen(!isContentOpen);
+  const handleDescriptionToggle = () => {
+    setIsDescriptionOpen(!isDescriptionOpen);
+  };
+
+  const handleCuriosityToggle = () => {
+    setIsCuriosityOpen(!isCuriosityOpen);
+  };
+
+  const handleOriginToggle = () => {
+    setIsOriginOpen(!isOriginOpen);
   };
 
   return (
@@ -58,12 +68,12 @@ export function CharacterPage() {
 
       <div className={style.oDiv}>
         <div className={style.iDiv}>
-          <h2 className={style.topic} onClick={handleContentToggle}>
+          <h2 className={style.topic} onClick={handleDescriptionToggle}>
             Descrição:
           </h2>
           <div
             className={`${style.content} ${
-              isContentOpen ? style.contentOpen : ""
+              isDescriptionOpen ? style.contentOpen : ""
             }`}
           >
             {character.description}
@@ -73,12 +83,12 @@ export function CharacterPage() {
       <br />
       <div className={style.oDiv}>
         <div className={style.iDiv}>
-          <h2 className={style.topic} onClick={handleContentToggle}>
+          <h2 className={style.topic} onClick={handleCuriosityToggle}>
             Curiosidades:
           </h2>
           <div
             className={`${style.content} ${
-              isContentOpen ? style.contentOpen : ""
+              isCuriosityOpen ? style.contentOpen : ""
             }`}
           >
             {character.curiosity}
@@ -88,17 +98,19 @@ export function CharacterPage() {
       <br />
       <div className={style.oDiv}>
         <div className={style.iDiv}>
-          <h2 className={style.topic} onClick={handleContentToggle}>
+          <h2 className={style.topic} onClick={handleOriginToggle}>
             Origem:
           </h2>{" "}
           <div
             className={`${style.content} ${
-              isContentOpen ? style.contentOpen : ""
+              isOriginOpen ? style.contentOpen : ""
             }`}
           >
-            {character.origin} <b className={style.bold}>Ano de criação:</b>{" "}
-            {character.age} <b className={style.bold}>Idade atual:</b>{" "}
-            {2023 - character.age}
+            <p className={style.text}>
+              {character.origin} <b className={style.bold}>Ano de criação:</b>{" "}
+              {character.age} <b className={style.bold}>Idade atual:</b>{" "}
+              {2023 - character.age}
+            </p>
           </div>
         </div>
       </div>
