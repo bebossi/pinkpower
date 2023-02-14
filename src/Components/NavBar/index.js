@@ -36,11 +36,7 @@ export function NavBar() {
         <button>Search</button>
       </div>
 
-      <div className={style.navbarUser}>
-        <a href="#">Profile</a>
-        <a href="#">Settings</a>
-        <a href="#">Logout</a>
-      </div>
+      <div className={style.navbarUser}>Profile Settings Logout</div>
     </nav>
   );
 }
