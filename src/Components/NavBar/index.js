@@ -12,7 +12,7 @@ export function NavBar() {
   return (
     <nav className={style.navbar}>
       <div className={style.navbarLogo}>
-       <Link to="/" ><a href="#">Pink Power</a></Link> 
+       <Link to="/" ><a>Pink Power</a></Link> 
       </div>
 
       <button className={style.navbarToggle} onClick={handleNavToggle}>
