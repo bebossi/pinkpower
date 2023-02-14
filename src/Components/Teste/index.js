@@ -1,7 +1,7 @@
 import { api } from "../../utils/api";
 import React from "react";
 import { useState, useEffect } from "react";
-import ReactPlayer from "react-player";
+import { Link } from "react-router-dom";
 
 export function Teste() {
   const [character, setCharacter] = useState([]);
@@ -22,10 +22,21 @@ export function Teste() {
 
   return (
     <>
-      <h1>Testando</h1>
-      {character.map((e) => {
-        return <ReactPlayer url={e.attributes.videoURL} playing="true" />;
-      })}
+      <h1>Pink Power</h1>
+      <div>
+        {character.map((e) => {
+          return (
+            <div>
+              <Link to={`/characters/${e.id}`}>
+                <img src={e.attributes.imageURL} alt="Foto do personagem" />
+                <div>
+                  <div>{e.attributes.name}</div>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 }
