@@ -53,7 +53,7 @@ export function CreateCharacter(){
             </div>
 
             <div className={style.divForm} > 
-            <label htmlFor="age" >Idade:</label>
+            <label htmlFor="age" >Ano de criação:</label>
             <input id="age"  type="number" name="age" value={character.age} onChange={handleChange} />
             </div>
 
