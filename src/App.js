@@ -4,10 +4,12 @@ import { Teste } from "./Components/Teste";
 import { Home } from "./Components/Home";
 import { CharacterPage } from "./Components/CharacterPage";
 import { EditCharacter } from "./Components/EditCharacter";
+import { NavBar } from "./Components/NavBar";
 
 function App() {
   return (
     <div className="App">
+      <NavBar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<CreateCharacter />} />
