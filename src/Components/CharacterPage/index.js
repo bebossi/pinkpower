@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import ReactPlayer from "react-player";
 import { useNavigate } from "react-router";
+import style from "./style.module.css";
 
 export function CharacterPage() {
   const [character, setCharacter] = useState([]);
@@ -14,14 +15,14 @@ export function CharacterPage() {
     navigate("/");
   }
 
-  async function handleDelete(){
-    try{
+  async function handleDelete() {
+    try {
       const response = await api.delete(`/characters/${params.characterId}`);
-      console.log(response)
+      console.log(response);
 
-      navigate("/")
-    } catch(err){
-      console.log(err)
+      navigate("/");
+    } catch (err) {
+      console.log(err);
     }
   }
 
@@ -39,28 +40,46 @@ export function CharacterPage() {
 
   return (
     <>
-      <h1>{character.name}</h1>
-      <img src={character.gifURL} alt="GIF do personagem" /> <br />
-      <span>
-        <b>Descrição:</b> {character.description}
-      </span>
+      <h1 className={style.title}>{character.name}</h1>
+
+      <div className={style.gifDiv}>
+        <img
+          src={character.gifURL}
+          alt="GIF do personagem"
+          className={style.gif}
+        />
+      </div>
+
+      <div className={style.oDiv}>
+        <div className={style.iDiv}>
+          <h2 className={style.topic}>Descrição:</h2>
+          {character.description}
+        </div>
+      </div>
       <br />
-      <span>
-        <b>Curiosidades:</b> {character.curiosity}
-      </span>
+      <div className={style.oDiv}>
+        <div className={style.iDiv}>
+          <h2 className={style.topic}>Curiosidades:</h2>
+          {character.curiosity}
+        </div>
+      </div>
       <br />
-      <span>
-        <b>Origem:</b> {character.origin}
-      </span>
+      <div className={style.oDiv}>
+        <div className={style.iDiv}>
+          <h2 className={style.topic}>Origem:</h2> {character.origin}{" "}
+          <b className={style.bold}>Ano de criação:</b> {character.age}{" "}
+          <b className={style.bold}>Idade atual:</b> {2023 - character.age}
+        </div>
+      </div>
+
       <br />
-      <span>
-        <b>Idade:</b> {character.age} <b>Idade atual:</b>
-        {2023 - character.age}
-      </span>
-      <br />
-      <ReactPlayer url={character.videoURL} playing={true} />
-      <button onClick={handdleBack}>Voltar</button>
-      <button onClick={handleDelete} >Deletar</button>
+      <div className={style.oDiv}>
+        <div className={style.movie}>
+          <ReactPlayer url={character.videoURL} playing={true} />
+        </div>
+        <button onClick={handdleBack}>Voltar</button>
+        <button onClick={handleDelete}>Deletar</button>
+      </div>
     </>
   );
 }
