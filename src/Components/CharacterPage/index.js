@@ -5,6 +5,7 @@ import { useState } from "react";
 import ReactPlayer from "react-player";
 import { useNavigate } from "react-router";
 import style from "./style.module.css";
+import ImageWithStatusText from "../Loading";
 
 export function CharacterPage() {
   const [character, setCharacter] = useState([]);
@@ -59,11 +60,7 @@ export function CharacterPage() {
       <h1 className={style.title}>{character.name}</h1>
 
       <div className={style.gifDiv}>
-        <img
-          src={character.gifURL}
-          alt="GIF do personagem"
-          className={style.gif}
-        />
+        <ImageWithStatusText imageUrl={character.gifURL} />
       </div>
 
       <div className={style.oDiv}>

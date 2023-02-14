@@ -1,0 +1,8 @@
+.gif {
+    width: 100%;
+    border: 20px #ffe0ff solid;
+}
+
+.gifHidden {
+    display: none;
+}

@@ -10,11 +10,6 @@
     flex-wrap: wrap;
 }
 
-.gif {
-    width: 20%;
-    border: 20px #ffe0ff solid;
-}
-
 .gifDiv {
     display: flex;
     justify-content: center;
