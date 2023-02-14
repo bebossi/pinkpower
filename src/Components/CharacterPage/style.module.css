@@ -70,3 +70,50 @@
 .contentOpen {
     height: 4rem;
 }
+
+.btn {
+    padding: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+    background-color: transparent;
+}
+
+.button {
+    background-color: #610139;
+    padding: 10px 30px 10px 30px;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background-color: #c33b80;
+    font-weight: bold;
+    transition: .2s ease;
+}
+
+.buttonEdit {
+    color: black;
+    background-color: #7c852ab0;
+    padding: 10px 30px 10px 30px;
+    border-radius: 6px;
+}
+
+.buttonEdit:hover {
+    background-color: #e5ff00;
+    font-weight: bold;
+    transition: .2s ease;
+}
+
+.buttonCancel {
+    background-color: #89000095;
+    padding: 10px 30px 10px 30px;
+    border-radius: 6px;
+}
+
+.buttonCancel:hover {
+    background-color: #ff0000;
+    font-weight: bold;
+    transition: .5s ease;
+}
