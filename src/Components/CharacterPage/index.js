@@ -7,7 +7,7 @@ import { useNavigate } from "react-router";
 import style from "./style.module.css";
 import ImageWithStatusText from "../Loading";
 import { Link } from "react-router-dom";
-
+import toast from "react-hot-toast";
 
 export function CharacterPage() {
   const [character, setCharacter] = useState([]);
@@ -26,7 +26,17 @@ export function CharacterPage() {
       navigate("/");
     } catch (err) {
       console.log(err);
+      toast.error("Houve um erro, tente novamente mais tarde.");
     }
+  }
+
+  function handleToast() {
+    toast((t) => (
+      <span>
+        Tem certeza disso? <button onClick={handleDelete}>Confirmar</button>{" "}
+        <button onClick={() => toast.dismiss(t.id)}>Cancelar</button>
+      </span>
+    ));
   }
 
   useEffect(() => {
@@ -36,6 +46,7 @@ export function CharacterPage() {
         setCharacter(response.data.data.attributes);
       } catch (err) {
         console.log(err);
+        toast.error("Houve um erro, tente novamente mais tarde.");
       }
     }
     fetchCharacters();
@@ -123,12 +134,10 @@ export function CharacterPage() {
           <button onClick={handdleBack} className={style.button}>
             Voltar
           </button>
-         <Link to={`/editCharacter/${params.characterId}`} >
-          <button className={style.buttonEdit}>
-            Editar
-          </button>
+          <Link to={`/editCharacter/${params.characterId}`}>
+            <button className={style.buttonEdit}>Editar</button>
           </Link>
-          <button onClick={handleDelete} className={style.buttonCancel}>
+          <button onClick={handleToast} className={style.buttonCancel}>
             Deletar
           </button>
         </div>

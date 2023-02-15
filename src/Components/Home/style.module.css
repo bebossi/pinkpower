@@ -1,4 +1,4 @@
-* {
+body {
     background-color: #ffa8d9;
     color: white;
     font-family: system-ui;
@@ -60,4 +60,10 @@
     background-color: #ffe0ff;
     padding: 2%;
     border-radius: 30px;
+}
+
+.search {
+    display: flex;
+    padding: 1%;
+    justify-content: flex-end;
 }
