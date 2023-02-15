@@ -5,13 +5,14 @@ import { CharacterPage } from "./Components/CharacterPage";
 import { EditCharacter } from "./Components/EditCharacter";
 import { NavBar } from "./Components/NavBar";
 import { Footer } from "./Components/Footer";
+import style from "./style.module.css"
 
 import { Toaster } from "react-hot-toast";
 
 
 function App() {
   return (
-    <div className="App">
+    <div className={style.App}>
       <Toaster />
       <NavBar />
       <Routes>

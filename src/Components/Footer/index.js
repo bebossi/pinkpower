@@ -11,10 +11,10 @@ export function Footer() {
       </ul>
       <ul>
         <h2>Contact Us</h2>
-        <Link to="https://www.linkedin.com/in/bernardo-bossi-87433a211/" >
+        <Link className={style.link} to="https://www.linkedin.com/in/bernardo-bossi-87433a211/" >
           <li>Linkedin Bernardo</li>
         </Link>
-        <Link to="https://www.linkedin.com/in/marco-antonio-oliveira-gon%C3%A7alves-314515123/" >
+        <Link className={style.link} to="https://www.linkedin.com/in/marco-antonio-oliveira-gon%C3%A7alves-314515123/" >
           <li>Linkedin Marco</li>
         </Link>
       </ul>
