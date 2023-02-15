@@ -6,10 +6,11 @@ import { CharacterPage } from "./Components/CharacterPage";
 import { EditCharacter } from "./Components/EditCharacter";
 import { NavBar } from "./Components/NavBar";
 import { Footer } from "./Components/Footer";
+import style from "./style.module.css"
 
 function App() {
   return (
-    <div className="App">
+    <div className={style.App}>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
