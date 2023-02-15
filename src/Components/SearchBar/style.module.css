@@ -1,0 +1,24 @@
+.navbarSearch {
+    background-color: transparent;
+}
+
+.navbarSearch input {
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem 5rem 0.5rem 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    color: #89004f;
+    background-color: white;
+}
+
+.navbarSearch button {
+    background-color: #ff69b4;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
