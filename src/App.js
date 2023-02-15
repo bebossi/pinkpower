@@ -5,7 +5,9 @@ import { CharacterPage } from "./Components/CharacterPage";
 import { EditCharacter } from "./Components/EditCharacter";
 import { NavBar } from "./Components/NavBar";
 import { Footer } from "./Components/Footer";
+
 import { Toaster } from "react-hot-toast";
+
 
 function App() {
   return (
