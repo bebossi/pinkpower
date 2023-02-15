@@ -31,11 +31,6 @@ export function NavBar() {
         <Link to="/teste">Teste</Link>
       </div>
 
-      <div className={style.navbarSearch}>
-        <input type="text" placeholder="Search" />
-        <button>Search</button>
-      </div>
-
       <div className={style.navbarUser}>Profile Settings Logout</div>
     </nav>
   );
