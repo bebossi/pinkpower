@@ -14,5 +14,10 @@
 }
 .link{
     text-decoration: none;
-    text-decoration-color: none;
+    list-style: none;
+
+}
+.link:visited{
+  text-decoration: none;
+  color: white;
 }
