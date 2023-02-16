@@ -8,7 +8,7 @@ import { Footer } from "./Components/Footer";
 import style from "./style.module.css"
 
 import { Toaster } from "react-hot-toast";
-import { AboutUs } from "./Components/teste";
+import { AboutUs } from "./Components/AboutUs";
 
 
 function App() {

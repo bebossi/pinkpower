@@ -12,7 +12,7 @@ export function AboutUs() {
     })
 
     function handleContainerToggle(id){
-        setIsContainerOpen(clickedId => ({...clickedId,[id]: !clickedId[id] }))
+        setIsContainerOpen(clickedId => ({...clickedId, [id]: !clickedId[id] }))
     }
 
   return (
