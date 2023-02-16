@@ -1,6 +1,6 @@
 import style from "./style.module.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export function NavBar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -15,23 +15,23 @@ export function NavBar() {
         <Link to="/">Home</Link>
       </div>
 
-      <button className={style.navbarToggle} onClick={handleNavToggle}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
       <div
         className={`${style.navbarLinks} ${
           isNavOpen ? style.navbarLinksOpen : ""
         }`}
       >
         <Link to="/create">Create</Link>
-        <Link to="/editCharacter">Edit</Link>
-        <Link to="/teste">Teste</Link>
+        <Link to={`/editCharacter/${useLocation().pathname.split("/")[2]}`}>
+          Edit
+        </Link>
+        <Link to="/teste">About us</Link>
       </div>
 
-      <div className={style.navbarUser}>Profile Settings Logout</div>
+      <button className={style.navbarToggle} onClick={handleNavToggle}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   );
 }
