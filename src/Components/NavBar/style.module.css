@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #89004f;
+  background-color: #ff6f9c;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +12,7 @@
   font-size: 1.5rem;
   text-decoration: none;
   font-weight: bold;
-  background-color: #89004f;
+  background-color: #ff6f9c;
 }
 
 .navbarToggle {
@@ -50,7 +50,7 @@
   overflow: hidden;
   transition: height 0.3s ease-in-out;
   margin-top: 1rem;
-  background-color: #89004f;
+  background-color: #ff6f9c;
 }
 
 .navbarLinksOpen {
@@ -62,18 +62,5 @@
   margin: 0.5rem 0;
   text-decoration: none;
   font-size: 1.2rem;
-  background-color: #89004f;
-}
-
-.navbarUser {
-  background-color: #89004f;
-}
-
-.navbarUser a {
-  color: white;
-  margin-left: 1rem;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background-color: #89004f;
+  background-color: #ff6f9c;
 }
