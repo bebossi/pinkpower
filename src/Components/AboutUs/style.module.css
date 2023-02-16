@@ -1,17 +1,19 @@
-.about{
+.about {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.container{
+
+.container {
     width: 100%;
     background-color: #ffe0ff;
     margin: 12px;
     color: #89004f;
     border-radius: 30px;
+    box-shadow: 8px 8px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
-.paragrafo{
+.paragrafo {
     display: flex;
     flex-direction: column;
     height: 0;
@@ -21,6 +23,7 @@
     background-color: transparent;
     color: #89004f;
 }
-.paragrafoOpen{
+
+.paragrafoOpen {
     height: 4em;
 }
