@@ -1,6 +1,6 @@
 import style from "./style.module.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 
 export function NavBar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -27,7 +27,7 @@ export function NavBar() {
         }`}
       >
         <Link to="/create">Create</Link>
-        <Link to="/editCharacter">Edit</Link>
+        <Link to={`/editCharacter/`}>Edit</Link>
         <Link to="/teste">Teste</Link>
       </div>
 

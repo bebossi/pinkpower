@@ -12,11 +12,10 @@ import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-
     <div className={style.App}>
       <Toaster />
 
-      <NavBar />
+      <NavBar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<CreateCharacter />} />
