@@ -2,22 +2,33 @@
   margin-top: auto;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   width: 100%;
 }
+
 .footer ul {
   list-style: none;
   display: flex;
   flex-direction: column;
 }
+
 .footer li {
   display: flex;
 }
-.link{
-    text-decoration: none;
-    list-style: none;
+
+.link {
+  text-decoration: none;
+  list-style: none;
 
 }
-.link:visited{
+
+.link:visited {
   text-decoration: none;
   color: white;
+}
+
+.barra {
+  border-bottom: 2px white solid;
+  width: 95%;
+  padding-top: 2%;
 }
