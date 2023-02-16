@@ -8,6 +8,7 @@ import { Footer } from "./Components/Footer";
 import style from "./style.module.css"
 
 import { Toaster } from "react-hot-toast";
+import { AboutUs } from "./Components/teste";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/create" element={<CreateCharacter />} />
         <Route path="/characters/:characterId" element={<CharacterPage />} />
         <Route path="/editCharacter/:characterId" element={<EditCharacter />} />
+        <Route path="/teste" element={<AboutUs/>} />
       </Routes>
       <Footer />
     </div>

@@ -1,0 +1,26 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    background-color: #ffe0ff;
+    margin: 12px;
+    color: #89004f;
+    border-radius: 30px;
+}
+
+.paragrafo{
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    margin-top: 1rem;
+    background-color: transparent;
+    color: #89004f;
+}
+.paragrafoOpen{
+    height: 4em;
+}
