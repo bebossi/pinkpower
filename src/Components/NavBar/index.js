@@ -2,6 +2,7 @@ import style from "./style.module.css";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
+
 export function NavBar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -25,6 +26,7 @@ export function NavBar() {
           Edit
         </Link>
         <Link to="/teste">About us</Link>
+
       </div>
 
       <button className={style.navbarToggle} onClick={handleNavToggle}>
