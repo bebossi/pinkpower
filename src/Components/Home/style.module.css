@@ -62,10 +62,11 @@ body {
 .oDiv {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 2%;
     background-color: #ffe0ff;
     padding: 2%;
     border-radius: 30px;
+    justify-content: center;
 }
 
 .search {
