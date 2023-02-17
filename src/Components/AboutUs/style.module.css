@@ -27,3 +27,18 @@
 .paragrafoOpen {
     height: 4em;
 }
+.topic{
+    font-family: Monospace;
+    font-size: 2em;
+    border-bottom: 2px dashed #89004f;
+    color: #89004f;
+    background-color: transparent;
+    cursor: pointer;
+}
+.smallContainer{
+    padding: 2%;
+}
+.title{
+    font-size: 3em;
+    font-family: Apple Chancery, cursive;
+}
