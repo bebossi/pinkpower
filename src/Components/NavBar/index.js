@@ -25,7 +25,7 @@ export function NavBar() {
         <Link to={`/editCharacter/${useLocation().pathname.split("/")[2]}`}>
           Edit
         </Link>
-        <Link to="/teste">About us</Link>
+        <Link to="/aboutUs">About us</Link>
 
       </div>
 
