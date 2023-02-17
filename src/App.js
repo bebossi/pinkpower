@@ -22,7 +22,7 @@ function App() {
         <Route path="/create" element={<CreateCharacter />} />
         <Route path="/characters/:characterId" element={<CharacterPage />} />
         <Route path="/editCharacter/:characterId" element={<EditCharacter />} />
-        <Route path="/teste" element={<AboutUs/>} />
+        <Route path="/aboutUS" element={<AboutUs/>} />
       </Routes>
       <Footer />
     </div>
