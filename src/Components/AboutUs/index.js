@@ -17,10 +17,11 @@ export function AboutUs() {
 
   return (
     <section>
-      <h1>About Us</h1>
+      <h1 className={style.title} >About Us</h1>
       <div className={style.about}>
         <div className={style.container}>
-          <h2 onClick={()=>  handleContainerToggle("formacao")} >Formação</h2>
+        <div className={style.smallContainer} >
+          <h2 className={style.topic} onClick={()=>  handleContainerToggle("formacao")} >Formação</h2>
           <p className={`${style.paragrafo} ${
             isContainerOpen.formacao ? style.paragrafoOpen: ""
           }`} >
@@ -28,8 +29,10 @@ export function AboutUs() {
             2023
           </p>
         </div>
+        </div>
         <div className={style.container}>
-          <h2 onClick={()=>  handleContainerToggle("inicioProjeto")} >Inicio do Projeto</h2>
+        <div className={style.smallContainer} >
+          <h2 className={style.topic} onClick={()=>  handleContainerToggle("inicioProjeto")} >Inicio do Projeto</h2>
           <p className={`${style.paragrafo} ${
             isContainerOpen.inicioProjeto ? style.paragrafoOpen: ""
           }`} >
@@ -40,8 +43,10 @@ export function AboutUs() {
             por isso o nome Pink Power.
           </p>
         </div>
+        </div>
         <div className={style.container}>
-          <h2 onClick={()=>  handleContainerToggle("desenvolvimento")} >Desenvolvimento</h2>
+          <div className={style.smallContainer} >
+          <h2 className={style.topic} onClick={()=>  handleContainerToggle("desenvolvimento")} >Desenvolvimento</h2>
           <p className={`${style.paragrafo} ${
             isContainerOpen.desenvolvimento ? style.paragrafoOpen: ""
           }`} >
@@ -53,9 +58,11 @@ export function AboutUs() {
             "Personagens Rosas" trouxe um aspecto criativo e divertido ao
             projeto.
           </p>
+          </div>
         </div>
         <div className={style.container}>
-          <h2 onClick={()=>  handleContainerToggle("objetivo")} >Objetivo</h2>
+          <div className={style.smallContainer} >
+          <h2 className={style.topic} onClick={()=>  handleContainerToggle("objetivo")} >Objetivo</h2>
           <p className={`${style.paragrafo} ${
             isContainerOpen.objetivo ? style.paragrafoOpen: ""
           }`} >
@@ -68,6 +75,7 @@ export function AboutUs() {
             e a API no Strapi, permitindo que as informações fossem armazenadas
             de forma persistente.
           </p>
+          </div>
         </div>
       </div>
     </section>
